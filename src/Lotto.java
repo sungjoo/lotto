@@ -6,17 +6,15 @@ public class Lotto {
 	 * 인스턴스 변수
 	 */
 	public static void main(String[] args) {
-		new Lotto().printLotto();
+		new Lotto().getLotto();
 	}
 	
-	public void printLotto() {
+	public int[] getLotto() {
+		int[] numbers = new int[6];			// 숫자 6개를 담기 위한 배열 생성.
 		for(int i = 0; i < 6 ; i++) {
-			if(i == 5) {
-				System.out.print(getName());
-			}else {
-				System.out.print(getName() + " , ");
-			}
+				numbers[i] = getName();
 		}
+		return numbers;
 	}
 	
 	Random random = new Random();
